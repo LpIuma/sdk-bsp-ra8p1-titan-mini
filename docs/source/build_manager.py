@@ -214,7 +214,7 @@ class BuildManager:
                 print(f"  警告: 移动英文版文件时出错: {e}")
             
             # 中文版构建时排除英文文档
-            zh_env['SPHINX_EXCLUDE_PATTERNS'] = '*.md'
+            zh_env['SPHINX_EXCLUDE_PATTERNS'] = '[!*_zh].md'
             
             print(f"中文版构建环境变量:")
             print(f"  LANG: {zh_env.get('LANG', 'N/A')}")
